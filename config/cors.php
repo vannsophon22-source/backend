@@ -6,9 +6,11 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'https://frontend-sigma-indol-luj1jquwvs.vercel.app',
-        'http://localhost:3000'
+        'https://frontend-dyqdxndpj-vannsophons-projects.vercel.app',
+        'http://localhost:3000',
     ],
+
+    'allowed_origins_patterns' => [],
 
     'allowed_headers' => ['*'],
 
