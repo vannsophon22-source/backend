@@ -12,18 +12,14 @@ class Kernel extends HttpKernel
      * These middleware are run during every request to your application.
      */
     protected $middleware = [
-        \App\Http\Middleware\TrustHosts::class,
-        \App\Http\Middleware\TrustProxies::class,
-        \Fruitcake\Cors\HandleCors::class,
-        \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
-        \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        \App\Http\Middleware\TrimStrings::class,
-        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \Illuminate\Http\Middleware\HandleCors::class,
-        \Illuminate\Http\Middleware\HandleCors::class,
-    ];
-
+    \App\Http\Middleware\TrustHosts::class,
+    \App\Http\Middleware\TrustProxies::class,
+    \Illuminate\Http\Middleware\HandleCors::class,
+    \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
+    \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+    \App\Http\Middleware\TrimStrings::class,
+    \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+];
     /**
      * The application's route middleware groups.
      */
