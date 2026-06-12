@@ -6,7 +6,7 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'https://frontend-dyqdxndpj-vannsophons-projects.vercel.app',
+        'https://frontend-git-main-vannsophons-projects.vercel.app/',
         'http://localhost:3000',
     ],
 
