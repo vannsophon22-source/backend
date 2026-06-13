@@ -14,12 +14,12 @@ class UnitController extends Controller
     /**
      * Display a listing of all units.
      */
-    public function index()
+public function index()
 {
-    // Eager load 'bookings' so the frontend can see the status
-    $units = Unit::with(['property', 'bookings'])->latest()->get();
-    $units = Unit::all();
-    
+    $units = Unit::with(['property', 'bookings'])
+        ->latest()
+        ->get();
+
     return response()->json([
         'message' => 'Units retrieved successfully',
         'data' => $units
