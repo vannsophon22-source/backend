@@ -25,8 +25,11 @@ public function index()
                 'tittle' => $unit->tittle,
                 'price' => $unit->price,
                 'image' => $unit->image,
-                'status' => strtolower(trim($unit->status)), // 🔥 NORMALIZE HERE
-                'property' => $unit->property,
+                'status' => strtolower(trim($unit->status ?? '')),
+                'property' => [
+                    'id' => $unit->property->id ?? null,
+                    'location' => $unit->property->location ?? 'N/A',
+                ],
             ];
         });
 
