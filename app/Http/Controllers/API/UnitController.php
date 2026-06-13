@@ -18,7 +18,17 @@ public function index()
 {
     $units = Unit::with(['property', 'bookings'])
         ->latest()
-        ->get();
+        ->get()
+        ->map(function ($unit) {
+            return [
+                'id' => $unit->id,
+                'tittle' => $unit->tittle,
+                'price' => $unit->price,
+                'image' => $unit->image,
+                'status' => strtolower(trim($unit->status)), // 🔥 NORMALIZE HERE
+                'property' => $unit->property,
+            ];
+        });
 
     return response()->json([
         'message' => 'Units retrieved successfully',
