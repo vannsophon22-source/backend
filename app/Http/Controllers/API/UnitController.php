@@ -59,8 +59,8 @@ public function show($id)
         // Aligned perfectly with your database migration layout fields
         $validated = $request->validate([
              'property_id'        => 'required|exists:properties,id',
-    'title'              => 'required|string|max:250',
-    'description'        => 'nullable|string',
+    'tittle'             => 'required|string|max:250',
+    'descrepton'         => 'nullable|string',
     'floor'              => 'nullable|string',
     'status'             => 'required|in:available,unavailable',
     'price_type'         => 'required|in:month,year,day',
