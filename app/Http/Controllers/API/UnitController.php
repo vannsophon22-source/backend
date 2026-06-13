@@ -58,18 +58,18 @@ public function show($id)
 
         // Aligned perfectly with your database migration layout fields
         $validated = $request->validate([
-            'property_id'        => 'required|exists:properties,id',
-            'tittle'             => 'required|string|max:250',
-            'descrepton'         => 'nullable|string',
-            'floor'              => 'nullable|string',
-            'status'             => 'required|in:available,unavailable',
-            'price_type'         => 'required|in:month,year,day',
-            'price'              => 'required|numeric',
-            'residential_water'  => 'nullable|string',
-            'electricity_prices' => 'nullable|string',
-            'bed'                => 'nullable|string',
-            'max_member'         => 'nullable|string',
-            'image'              => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
+             'property_id'        => 'required|exists:properties,id',
+    'title'              => 'required|string|max:250',
+    'description'        => 'nullable|string',
+    'floor'              => 'nullable|string',
+    'status'             => 'required|in:available,unavailable',
+    'price_type'         => 'required|in:month,year,day',
+    'price'              => 'required|numeric',
+    'residential_water'  => 'nullable|string',
+    'electricity_prices' => 'nullable|string',
+    'bed'                => 'nullable|string',
+    'max_member'         => 'nullable|string',
+    'image'              => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
         ]);
 
         $property = Property::findOrFail($validated['property_id']);
